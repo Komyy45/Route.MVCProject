@@ -11,10 +11,10 @@ namespace Route.MVCProject.PL
 
             // Add services to the container.
             #region Configure Services
-            
+
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server = LAPTOP-5EBO3503\\SQLEXPRESS; Database = MVCApplication; Trusted_Connection = true; TrustServerCertificate = true"));
+            builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             #endregion
 
