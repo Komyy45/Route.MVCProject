@@ -9,11 +9,8 @@ using Route.MVCProject.DAL.Models;
 
 namespace Route.MVCProject.DAL.Data
 {
-    internal class ApplicationDbContext : DbContext
+    public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-         => optionsBuilder.UseSqlServer("Server = LAPTOP-5EBO3503\\SQLEXPRESS; Database = MVCApplication; Trusted_Connection = true; TrustServerCertificate = true");
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
