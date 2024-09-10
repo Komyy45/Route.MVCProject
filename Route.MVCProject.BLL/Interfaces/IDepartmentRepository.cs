@@ -7,7 +7,7 @@ using Route.MVCProject.DAL.Models;
 
 namespace Route.MVCProject.BLL.Interfaces
 {
-    internal interface IDepartmentRepository
+    public interface IDepartmentRepository
     {
         IEnumerable<Department> GetAll();
 

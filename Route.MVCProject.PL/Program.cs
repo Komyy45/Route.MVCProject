@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Route.MVCProject.BLL.Interfaces;
+using Route.MVCProject.BLL.Repositories;
 using Route.MVCProject.DAL.Data;
+using Route.MVCProject.DAL.Models;
 
 namespace Route.MVCProject.PL
 {
@@ -15,6 +18,8 @@ namespace Route.MVCProject.PL
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<IDepartmentRepository,DepartmentRepository>();
 
             #endregion
 
