@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Route.MVCProject.PL.Models;
+using Route.MVCProject.PL.ViewModels;
 
 namespace Route.MVCProject.PL.Controllers
 {

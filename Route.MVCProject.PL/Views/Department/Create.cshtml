@@ -1,0 +1,29 @@
+﻿@model Department
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="my-3">
+    <h1>Create New Department</h1>
+</div>
+<form class="d-flex flex-column gap-4" asp-action="Create">
+    <div class="form-group">
+        <label class="form-label" asp-for="Code"></label>
+        <input class="form-control" asp-for="Code"/>
+        <span class="text-danger text-capitalize" asp-validation-for="Code"></span>
+    </div>   
+    <div class="form-group">
+        <label class ="form-label" asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span class="text-danger text-capitalize" asp-validation-for="Name"></span>
+    </div>    
+    <div class="form-group">
+        <label class="form-label"  asp-for="CreationDate"></label>
+        <input type="date" class="form-control" asp-for="CreationDate" />
+    </div>
+    <div class="form-group mt-4 d-flex justify-content-end gap-3">
+        <input type="submit" class="btn btn-primary" value="Create Department"/>
+        <a class="btn btn-danger" asp-action="Index"><i class="fa-solid fa-arrow-right-to-bracket me-2"></i> Go Back</a>
+    </div>
+</form>
+
