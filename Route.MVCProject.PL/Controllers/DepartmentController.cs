@@ -17,8 +17,8 @@ namespace Route.MVCProject.PL.Controllers
         // "BaseUrl/Department/Index"
         public IActionResult Index()
         {
-            // var Departments = _departmentRepo.
-            return View();
+            var Departments = departmentRepo.GetAll();
+            return View(Departments);
         }
     }
 }
