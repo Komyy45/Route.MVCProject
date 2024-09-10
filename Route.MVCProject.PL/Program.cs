@@ -20,6 +20,9 @@ namespace Route.MVCProject.PL
 
             var app = builder.Build();
 
+            // Apply Migrations
+            // Data Seeding
+
             // Configure the HTTP request pipeline.
             #region Configure
             
@@ -34,8 +37,6 @@ namespace Route.MVCProject.PL
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
